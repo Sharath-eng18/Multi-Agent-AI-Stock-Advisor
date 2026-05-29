@@ -118,7 +118,7 @@ def news_sentiment_analyst_node(state: AgentState) -> dict:
     a partial state update with news_articles and sentiment_score.
     """
     ticker: str = state["ticker"]
-    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=30)
 
     # --- Fetch headlines ---
     try:
@@ -460,25 +460,25 @@ def make_recommendation(
     if rsi > 70 and sentiment_score < 0.0:
         return "sell"
 
-    # Branch 3: bullish MACD + bullish SMA crossover + strong positive sentiment → buy
+    # Branch 3: bullish MACD + bullish SMA crossover + positive sentiment → buy
     # Guard: None MACD or None SMA_50 does NOT satisfy the numeric comparison.
     if (
         macd is not None
         and sma50 is not None
         and macd > 0
         and sma20 > sma50
-        and sentiment_score >= 0.15
+        and sentiment_score > 0.0
     ):
         return "buy"
 
-    # Branch 4: bearish MACD + bearish SMA crossover + strong negative sentiment → sell
+    # Branch 4: bearish MACD + bearish SMA crossover + negative sentiment → sell
     # Guard: None MACD or None SMA_50 does NOT satisfy the numeric comparison.
     if (
         macd is not None
         and sma50 is not None
         and macd <= 0
         and sma20 <= sma50
-        and sentiment_score <= -0.15
+        and sentiment_score < 0.0
     ):
         return "sell"
 
