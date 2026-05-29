@@ -200,7 +200,8 @@ function App() {
 
     try {
       // Step 1: Start data fetching
-      const response = await fetch(`http://127.0.0.1:5001/api/analyze?ticker=${formattedTicker}`);
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5001';
+      const response = await fetch(`${API_BASE_URL}/api/analyze?ticker=${formattedTicker}`);
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
