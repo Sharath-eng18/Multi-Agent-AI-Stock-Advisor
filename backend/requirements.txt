@@ -8,3 +8,4 @@ torch>=2.2
 yfinance>=0.2
 pandas>=2.0
 hypothesis>=6.100
+gunicorn>=20.1.0
