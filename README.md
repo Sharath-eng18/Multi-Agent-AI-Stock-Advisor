@@ -9,6 +9,7 @@ STOC.AI is a full-stack multi-agent stock analysis system that combines **NLP-po
 ## Table of Contents
 
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Architecture Overview](#architecture-overview)
 - [Multi-Agent Pipeline](#multi-agent-pipeline)
 - [Tech Stack](#tech-stack)
@@ -39,6 +40,34 @@ STOC.AI is a full-stack multi-agent stock analysis system that combines **NLP-po
 
 ---
 
+## Screenshots
+
+### Landing Page
+
+The hero landing page with a massive ticker search input and trending stock cards.
+
+![Landing Page](screenshots/Landing-Page.png)
+
+### Analysis Results — BUY Signal (AAPL)
+
+Full analysis dashboard showing a **BUY** recommendation for Apple, with multi-agent consensus cards, interactive 30-day price chart, news sentiment feed, and detailed advisor justification.
+
+![BUY Analysis — AAPL](screenshots/Result-BUY-Example.png)
+
+### Analysis Results — SELL Signal (KGC)
+
+A **SELL** recommendation for Kinross Gold, demonstrating bearish technical indicators and negative news sentiment converging to a sell signal.
+
+![SELL Analysis — KGC](screenshots/Result-SELL-Example.png)
+
+### Analysis Results — HOLD Signal (NVDA)
+
+A **HOLD** recommendation for NVIDIA, showing mixed signals where no strong buy or sell condition is met.
+
+![HOLD Analysis — NVDA](screenshots/Result-HOLD-Example.png)
+
+---
+
 ## Architecture Overview
 
 ```
@@ -61,9 +90,9 @@ STOC.AI is a full-stack multi-agent stock analysis system that combines **NLP-po
 │  │  │  Sentiment   │    │  Analyst     │    │Advisor │ │    │
 │  │  │  Analyst     │    │              │    │        │ │    │
 │  │  └──────────────┘    └──────────────┘    └────────┘ │    │
-│  │       │                    │                 │      │    │
-│  │   HuggingFace         yfinance         Decision     │    │
-│  │   DistilBERT          OHLCV Data       Logic        │    │
+│  │       │                     │                │      │    │
+│  │   HuggingFace          yfinance          Decision   │    │
+│  │   DistilBERT           OHLCV Data        Logic      │    │
 │  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
