@@ -1,0 +1,31 @@
+# Virtual Environment
+backend/venv/
+venv/
+
+# Python caching & builds
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.hypothesis/
+
+# Local Node directories
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# Logs
+*.log
+logs/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+.kiro/

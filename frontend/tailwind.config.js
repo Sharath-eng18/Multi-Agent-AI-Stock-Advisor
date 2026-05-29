@@ -1,0 +1,78 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "outline": "#1a1a1a",
+        "tertiary-fixed": "#d6e3ff",
+        "primary": "#1a1a1a",
+        "inverse-on-surface": "#f5f0e8",
+        "surface-dim": "#d6d1c9",
+        "outline-variant": "#d0cbc3",
+        "surface-bright": "#faf7f2",
+        "primary-container": "#ffcc00",
+        "on-secondary-fixed-variant": "#1a1a1a",
+        "inverse-surface": "#1a1a1a",
+        "tertiary-container": "#d6e3ff",
+        "on-tertiary-container": "#1a1a1a",
+        "secondary-container": "#ffdad6",
+        "primary-fixed-dim": "#e6b800",
+        "on-secondary-container": "#1a1a1a",
+        "primary-fixed": "#ffcc00",
+        "on-error-container": "#93000a",
+        "on-tertiary-fixed": "#1a1a1a",
+        "on-primary-fixed": "#1a1a1a",
+        "error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#1a1a1a",
+        "surface-variant": "#e8e3da",
+        "tertiary": "#0055ff",
+        "tertiary-fixed-dim": "#a8c6ff",
+        "secondary-fixed-dim": "#ffb3ab",
+        "on-surface": "#1a1a1a",
+        "on-primary-container": "#1a1a1a",
+        "inverse-primary": "#f5f0e8",
+        "secondary": "#e63b2e",
+        "surface-container-highest": "#e2ddd4",
+        "on-surface-variant": "#4a4a4a",
+        "surface-container-high": "#e8e3da",
+        "on-primary": "#ffffff",
+        "on-background": "#1a1a1a",
+        "on-secondary": "#1a1a1a",
+        "on-tertiary-fixed-variant": "#1a1a1a",
+        "on-secondary-fixed": "#1a1a1a",
+        "surface": "#f5f0e8",
+        "on-error": "#ffffff",
+        "surface-container-low": "#f2ede5",
+        "background": "#f5f0e8",
+        "secondary-fixed": "#ffdad6",
+        "surface-tint": "#1a1a1a",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "surface-container": "#eee9e0",
+        "error": "#cc0000"
+      },
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      fontFamily: {
+        "headline": ["Space Grotesk", "sans-serif"],
+        "display": ["Space Grotesk", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Space Grotesk", "sans-serif"]
+      },
+      boxShadow: {
+        'neo': '4px 4px 0px 0px #1a1a1a',
+        'neo-lg': '8px 8px 0px 0px #1a1a1a',
+      }
+    },
+  },
+  plugins: [],
+}
