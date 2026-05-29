@@ -44,24 +44,24 @@ STOC.AI is a full-stack multi-agent stock analysis system that combines **NLP-po
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      FRONTEND (React + Vite)                │
-│   Bauhaus / Neo-Brutalist UI  •  TailwindCSS  •  SVG Charts│
-│                     localhost:5173                           │
+│   Bauhaus / Neo-Brutalist UI  •  TailwindCSS  •  SVG Charts │
+│                     localhost:5173                          │
 └─────────────────────┬───────────────────────────────────────┘
                       │  HTTP GET /api/analyze?ticker=AAPL
                       │  (Vite dev proxy → :5001)
 ┌─────────────────────▼───────────────────────────────────────┐
 │                      BACKEND (Flask + LangGraph)            │
-│                     localhost:5001                           │
+│                     localhost:5001                          │
 │                                                             │
 │  ┌─────────────────────────────────────────────────────┐    │
 │  │               LangGraph StateGraph                  │    │
 │  │                                                     │    │
-│  │  ┌──────────────┐   ┌──────────────┐   ┌────────┐  │    │
-│  │  │  News        │──▶│  Technical   │──▶│Portf.  │  │    │
-│  │  │  Sentiment   │   │  Analyst     │   │Advisor │  │    │
-│  │  │  Analyst     │   │              │   │        │  │    │
-│  │  └──────────────┘   └──────────────┘   └────────┘  │    │
-│  │       │                    │                │       │    │
+│  │  ┌──────────────┐    ┌──────────────┐    ┌────────┐ │    │
+│  │  │  News        │──▶│  Technical    │──▶│Portf.  │ │    │
+│  │  │  Sentiment   │    │  Analyst     │    │Advisor │ │    │
+│  │  │  Analyst     │    │              │    │        │ │    │
+│  │  └──────────────┘    └──────────────┘    └────────┘ │    │
+│  │       │                    │                 │      │    │
 │  │   HuggingFace         yfinance         Decision     │    │
 │  │   DistilBERT          OHLCV Data       Logic        │    │
 │  └─────────────────────────────────────────────────────┘    │
