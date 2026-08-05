@@ -633,6 +633,16 @@ def analyze():
     )
 
 
+@app.route("/health", methods=["GET"])
+def health():
+    """GET /health
+
+    Returns a simple healthcheck response so load balancers and deploys
+    can verify the app is reachable and the model is loaded.
+    """
+    return jsonify({"status": "ok", "model_ready": MODEL_READY}), 200
+
+
 # ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
